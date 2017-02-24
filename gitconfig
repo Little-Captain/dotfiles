@@ -30,9 +30,9 @@
 [fetch]
   prune = true
 [user]
-  name  = zgs225
-  email = zgs225@gmail.com
+  name  = Little-Captain
+  email = littlecaptain@foxmail.com
 [credential]
 	helper = osxkeychain
 [github]
-  user = zgs225
+  user = Little-Captain
