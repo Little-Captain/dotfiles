@@ -1,3 +1,14 @@
 !bin
 vim/bundle/
 tags
+
+# oh-my-zsh
+
+# custom files
+oh-my-zsh/custom/
+!oh-my-zsh/custom/plugins/example
+!oh-my-zsh/custom/example.zsh
+
+# temp files directories
+oh-my-zsh/cache/
+oh-my-zsh/log/
