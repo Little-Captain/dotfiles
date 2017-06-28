@@ -18,3 +18,5 @@ Icon?
 *.rar
 *.tar
 *.zip
+# fastlane的报告文件
+report.xml

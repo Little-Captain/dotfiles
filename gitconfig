@@ -19,20 +19,28 @@
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/Liu-Mac/.gitignore_global
   autocrlf = input
+	editor = vim
+	quotepath = false
 [merge]
   ff = only
 [include]
   path = .gitconfig.local
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [fetch]
   prune = true
 [user]
-  name  = Little-Captain
-  email = littlecaptain@foxmail.com
+	name = Little-Captain
+	email = littlecaptain@foxmail.com
 [credential]
 	helper = osxkeychain
 [github]
   user = Little-Captain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
