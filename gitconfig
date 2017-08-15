@@ -2,29 +2,14 @@
   default = current
 [color]
   ui = auto
-[alias]
-  aa = add --all
-  ap = add --patch
-  ca = commit --amend
-  ci = commit -v
-  co = checkout
-  br = branch
-  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
-  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
-  merge-branch = !git checkout master && git merge @{-1}
-  pr = !hub pull-request
-  st = status
-  up = !git fetch origin && git rebase origin/master
-  l  = log --pretty=colored
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [core]
 	excludesfile = /Users/Liu-Mac/.gitignore_global
-  autocrlf = input
-	editor = vim
+    autocrlf = input
+	editor = subl -w
 	quotepath = false
-[merge]
-  ff = only
+	askPass = true
 [include]
   path = .gitconfig.local
 [commit]
@@ -34,13 +19,9 @@
 [user]
 	name = Little-Captain
 	email = littlecaptain@foxmail.com
-[credential]
-	helper = osxkeychain
 [github]
   user = Little-Captain
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[alias]
+	mylog = log --all --decorate --graph
+[credential]
+	helper = store
